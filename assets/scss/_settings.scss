@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+ul,
+ol,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fff;
+  font-family: Manrope;
+}
+.wrapper {
+  overflow: hidden;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.lc_row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.white_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  padding: 0 24px;
+  border-radius: 20px;
+  border: 1px solid #e4e4e4;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+  width: max-content;
+}
+
+.section_title {
+  color: #000;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 60px */
+  span {
+    color: #4060aa;
+  }
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.checkmark {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* ✅ check belgisi */
+.checkmark::after {
+  content: "";
+  width: 8px;
+  height: 16px;
+  border-right: 2px solid #4060aa;
+  border-bottom: 2px solid #4060aa;
+  transform: rotate(45deg) scale(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+/* bosilganda belgini ko‘rsatamiz */
+.custom-checkbox input:checked + .checkmark::after {
+  transform: rotate(45deg) scale(1);
+}
+
+.final_calculation {
+  padding: 36px;
+  border-radius: 20px;
+  background: #f8f8f8;
+  max-width: 485px;
+  width: 100%;
+  .item_title {
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 41.6px */
+    margin-bottom: 60px;
+  }
+  input {
+    width: 100%;
+    padding-bottom: 24px;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 24px */
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #000;
+    outline: none;
+    margin-bottom: 24px;
+    &::placeholder {
+      color: #dedede;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+  }
+  .blue_btn {
+    padding: 24px 32px;
+    border-radius: 20px;
+    background: #4060aa;
+    color: #fff;
+    height: 70px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 21.6px */
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 239.058px;
+  }
+  .politics {
+    display: flex;
+    align-items: center;
+    gap: 0 18px;
+    span {
+      max-width: 320px;
+      color: #000;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 16.8px */
+      a {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+      }
+    }
+  }
+}
