@@ -52,7 +52,7 @@
           margin-top: 20px;
         }
         @media (max-width: 380px) {
-          gap: 0;
+          gap: 16px;
         }
         li {
           flex-direction: column;
@@ -81,6 +81,7 @@
           }
           @media (max-width: 556px) {
             gap: 16px;
+            border-radius: 0 0px 30px 30px;
           }
           &:first-child {
             .item_title {
@@ -154,7 +155,7 @@
         li:nth-child(4) {
           padding-top: 48px;
           @media (max-width: 768px) {
-            padding-top: 32px;  
+            padding-top: 32px;
           }
         }
       }
@@ -215,10 +216,16 @@
             max-width: calc(100% - 32px);
             // border-radius: 0px 35px 40px 40px;
             overflow: hidden;
-            padding: 36px 32px 36px 70px;
+            padding: 36px 12px 36px 90px;
             gap: 16px;
             left: 16px;
             height: fit-content;
+          }
+          @media (max-width: 387px) {
+            padding: 26px 12px 26px 80px;
+          }
+          @media (max-width: 360px) {
+            padding: 22px 12px 18px 68px;
           }
           .item_img {
             position: absolute;
