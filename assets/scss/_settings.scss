@@ -24,7 +24,9 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 16px;
+  @media (max-width: 1300px) {
+    padding: 0 16px;
+  }
 }
 .lc_row {
   display: flex;
@@ -52,7 +54,10 @@ body {
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 60px */
+  line-height: 100%;
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
   span {
     color: #4060aa;
   }
@@ -107,13 +112,20 @@ body {
   background: #f8f8f8;
   max-width: 485px;
   width: 100%;
+  @media (max-width: 556px) {
+    padding: 24px;
+  }
   .item_title {
     color: #000;
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
-    line-height: 130%; /* 41.6px */
+    line-height: 130%;
     margin-bottom: 60px;
+    @media (max-width: 556px) {
+      margin-bottom: 24px;
+      font-size: 21px;
+    }
   }
   input {
     width: 100%;
@@ -149,6 +161,9 @@ body {
     margin-bottom: 24px;
     width: 100%;
     max-width: 239.058px;
+    @media (max-width: 556px) {
+      max-width: 100%;
+    }
   }
   .politics {
     display: flex;
@@ -160,7 +175,8 @@ body {
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
-      line-height: 120%; /* 16.8px */
+      line-height: 120%;
+
       a {
         color: #000;
         font-size: 14px;
