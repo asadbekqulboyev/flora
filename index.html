@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flora</title>
-
-    <!-- styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
@@ -34,7 +33,7 @@
                                 <div class="header_time">09:00-21:30</div>
                             </div>
                             <!-- header button white btn -->
-                            <a href="#" class="white_btn">Перезвоните мне</a>
+                            <a href="#" class="white_btn modal_open">Перезвоните мне</a>
                             <!-- header menu  -->
                             <a href="#" class="header_menu">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16"
@@ -176,7 +175,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="#" class="white_btn blue_btn">Получить рассчет</a>
+                                <a href="#" class="white_btn blue_btn modal_open">Получить рассчет</a>
                             </div>
                             <!-- right item -->
                             <div class="right_item">
@@ -614,18 +613,18 @@
                 <!-- calculation row -->
                 <div class="calculation_row">
                     <!-- final calculation -->
-                    <form action="" class="final_calculation">
+                    <form action="send.php" class="final_calculation" method="post">
                         <!-- item title -->
                         <div class="item_title">
                             Записаться
                         </div>
-                        <input type="text" id="phone" placeholder="+7 (___) ___-__-__">
+                        <input type="tel" placeholder="+7 (___) ___-__-__" name="phone">
                         <!-- item btn -->
-                        <a href="#" class="white_btn blue_btn">Получить рассчет</a>
+                        <button class="white_btn blue_btn">Получить рассчет</button>
                         <!-- Politics -->
                         <div class="politics">
                             <label class="custom-checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" name="policy" checked>
                                 <span class="checkmark"></span>
                             </label>
                             <span>
@@ -706,15 +705,972 @@
                 </div>
             </div>
         </section>
+        <!-- experts -->
+        <section class="experts">
+            <!-- container -->
+            <div class="container">
+                <!-- title row -->
+                <div class="title_row">
+                    <!-- left side -->
+                    <div class="left_side">
+                        <div class="section_title">
+                            Ваша имплантация — <span>под контролем</span> экспертов.
+                        </div>
+                        <!-- item description -->
+                        <div class="item_description">
+                            Нестандартные случаи — наша ежедневная практика.
+                        </div>
+                    </div>
+                    <!-- right side -->
+                    <div class="right_side">
+                        <!-- item img -->
+                        <div class="item_img">
+                            <img src="assets/img/right_section.svg" alt="">
+                        </div>
+                        <div class="item_title">
+                            Более 30 000 успешных имплантаций
+                        </div>
+                        <div class="item_description">
+                            — доказательство того, что качество для нас не просто слово.
+                        </div>
+                    </div>
+                </div>
+                <!-- item adv -->
+                <ul class="item_adv">
+                    <li>
+                        <img src="assets/img/experts_galochka.svg" alt="">
+                        <p>
+                            Официально Сертифицированные
+                            мастера Nobel
+                        </p>
+                    </li>
+                    <li>
+                        <img src="assets/img/experts_galochka.svg" alt="">
+                        <p>
+                            Имеют опыт работы в ведущих
+                            клиниках мира
+                        </p>
+                    </li>
+                    <li>
+                        <img src="assets/img/experts_galochka.svg" alt="">
+                        <p>
+                            Участники всемирной
+                            ассоциации имплантологов
+                        </p>
+                    </li>
+                </ul>
+                <!-- lc row -->
+                <div class="lc_row">
+                    <!-- expert item -->
+                    <div class="expert_item">
+                        <!-- item expert -->
+                        <div class="expert_human">
+                            <img src="assets/img/experts.png" alt="">
+                            <span class="experience">Стаж: 19 лет</span>
+                            <span class="sertificate">Сертификаты</span>
+                        </div>
+                        <!-- item description -->
+                        <div class="experts_description">
+                            <!-- item img -->
+                            <div class="item_img">
+                                <img src="assets/img/experts_img.svg" alt="">
+                            </div>
+                            <!-- item number -->
+                            <div class="item_number">
+                                01
+                            </div>
+                            <!-- item texts -->
+                            <div class="item_texts">
+                                <!-- item name -->
+                                <div class="item_name">
+                                    Герасимов Александр
+                                </div>
+                                <!-- item work -->
+                                <div class="item_work">
+                                    Заведующий хирургическим отделением
+                                </div>
+                                <!-- work success -->
+                                <div class="success_item">
+                                    <!-- item patient -->
+                                    <div class="item_patinent">
+                                        <!-- item number -->
+                                        <div class="number">
+                                            6 000 +
+                                        </div>
+                                        <!-- item info -->
+                                        <div class="item_info">
+                                            пациентов
+                                        </div>
+                                    </div>
+                                    <!-- item patient -->
+                                    <div class="item_patinent">
+                                        <!-- item number -->
+                                        <div class="number">
+                                            25 000 +
+                                        </div>
+                                        <!-- item info -->
+                                        <div class="item_info">
+                                            установок
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- expert item -->
+                    <div class="expert_item">
+                        <!-- item expert -->
+                        <div class="expert_human">
+                            <img src="assets/img/expers2.png" alt="">
+                            <span class="experience">Стаж: 19 лет</span>
+                            <span class="sertificate">Сертификаты</span>
+                        </div>
+                        <!-- item description -->
+                        <div class="experts_description">
+                            <!-- item img -->
+                            <div class="item_img">
+                                <img src="assets/img/experts_img.svg" alt="">
+                            </div>
+                            <!-- item number -->
+                            <div class="item_number">
+                                02
+                            </div>
+                            <!-- item texts -->
+                            <div class="item_texts">
+                                <!-- item name -->
+                                <div class="item_name">
+                                    Закатова <br>
+                                    Елена
+                                </div>
+                                <!-- item work -->
+                                <div class="item_work">
+                                    Врач-стоматолог, ортопед
+                                </div>
+                                <!-- work success -->
+                                <div class="success_item">
+                                    <!-- item patient -->
+                                    <div class="item_patinent">
+                                        <!-- item number -->
+                                        <div class="number">
+                                            6 000 +
+                                        </div>
+                                        <!-- item info -->
+                                        <div class="item_info">
+                                            пациентов
+                                        </div>
+                                    </div>
+                                    <!-- item patient -->
+                                    <div class="item_patinent">
+                                        <!-- item number -->
+                                        <div class="number">
+                                            25 000 +
+                                        </div>
+                                        <!-- item info -->
+                                        <div class="item_info">
+                                            установок
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- expert item -->
+                    <div class="expert_item">
+                        <!-- item expert -->
+                        <div class="expert_human">
+                            <img src="assets/img/expers3.png" alt="">
+                            <span class="experience">Стаж: 19 лет</span>
+                            <span class="sertificate">Сертификаты</span>
+                        </div>
+                        <!-- item description -->
+                        <div class="experts_description">
+                            <!-- item img -->
+                            <div class="item_img">
+                                <img src="assets/img/experts_img.svg" alt="">
+                            </div>
+                            <!-- item number -->
+                            <div class="item_number">
+                                03
+                            </div>
+                            <!-- item texts -->
+                            <div class="item_texts">
+                                <!-- item name -->
+                                <div class="item_name">
+                                    Валиахметов Рустам
+                                </div>
+                                <!-- item work -->
+                                <div class="item_work">
+                                    Врач-стоматолог, хирург, имплантолог
+                                </div>
+                                <!-- work success -->
+                                <div class="success_item">
+                                    <!-- item patient -->
+                                    <div class="item_patinent">
+                                        <!-- item number -->
+                                        <div class="number">
+                                            6 000 +
+                                        </div>
+                                        <!-- item info -->
+                                        <div class="item_info">
+                                            пациентов
+                                        </div>
+                                    </div>
+                                    <!-- item patient -->
+                                    <div class="item_patinent">
+                                        <!-- item number -->
+                                        <div class="number">
+                                            25 000 +
+                                        </div>
+                                        <!-- item info -->
+                                        <div class="item_info">
+                                            установок
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experts-actions">
+                    <a href="#" class="show-more">
+                        <img src="assets/img/show-more.png" alt="">
+                        Показать больше
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="consult">
+            <div class="container">
+                <div class="consult-row">
+                    <div class="consult-left">
+                        <h2 class="section_title">Запишитесь <span>на бесплатную</span> консультацию</h2>
+                        <p class="sec_desc">к ведущим врачам по доступной цене</p>
+
+                        <div class="consult-left__items">
+                            <form action="" class="final_calculation">
+                                <!-- item title -->
+                                <div class="item_title">
+                                    Записаться на бесплатную консультацию сейчас
+                                </div>
+                                <input type="text" id="phone" placeholder="+7 (___) ___-__-__" class="phone-input">
+                                <!-- item btn -->
+                                <a href="#" class="white_btn blue_btn">Получить рассчет</a>
+                                <!-- Politics -->
+                                <div class="politics">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span>
+                                        Нажимая кнопку, вы соглашаетесь
+                                        <a href="#">c условиями
+                                            политики конфиденциальности.</a>
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="consult-person">
+                                <img src="assets/img/consult-person.png" alt="" class="person-img">
+                                <img src="assets/img/consult-subtrac1.png" alt="" class="consult-subtrac">
+                                <div class="person-texts">
+                                    <div class="person_name">Роман Грозов</div>
+                                    <p class="person_job">Имплантолог, кандидат наук</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="consult-right">
+                        <h2 class="section_title">Запишитесь <span>на бесплатную</span> консультацию</h2>
+                        <p class="sec_desc">к ведущим врачам по доступной цене</p>
+                        <div class="consult-prices">
+                            <div class="price-item">
+                                <div class="price-texts">
+                                    <div class="price-title">КТ-диагностика</div>
+                                    <div class="price-count">0 ₽</div>
+                                    <p class="old-price">7 000 ₽</p>
+                                </div>
+                                <img src="assets/img/consult-subtrac2.png" alt="">
+                            </div>
+                            <div class="price-item">
+                                <div class="price-texts">
+                                    <div class="price-title">План лечения</div>
+                                    <div class="price-count">0 ₽</div>
+                                    <p class="old-price">1 000 ₽</p>
+                                </div>
+                                <img src="assets/img/consult-subtrac3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review">
+            <div class="container">
+                <div class="review-row">
+                    <div class="review-left">
+                        <h2 class="section_title">Мы говорим о качестве, <span>пациенты — о результате</span></h2>
+                        <p class="sec_desc">Присоединяйтесь к сотням пациентов, чьи истории доказывают, что доверие
+                            оправдано</p>
+                        <div class="review-items">
+                            <div class="review-item">
+                                <img src="assets/img/review1.png" alt="" class="review-img">
+                                <div class="review-title">4 импланта Nobel и несъёмный протез</div>
+                                <div class="review-desc">Установили за 1 визит</div>
+                                <a href="#" class="show-more">
+                                    <img src="assets/img/show-more.png" alt="">
+                                    Читать отзыв
+                                </a>
+                            </div>
+                            <div class="review-item">
+                                <img src="assets/img/review2.png" alt="" class="review-img">
+                                <div class="review-title">Установили за 2 визита</div>
+                                <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
+                                <a href="#" class="show-more">
+                                    <img src="assets/img/show-more.png" alt="">
+                                    Читать отзыв
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-right">
+                        <h2 class="section_title">Мы говорим о качестве, <span>пациенты — о результате</span></h2>
+                        <p class="sec_desc">Присоединяйтесь к сотням пациентов, чьи истории доказывают, что доверие
+                            оправдано</p>
+                        <div class="review-swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="review-item">
+                                        <img src="assets/img/review3.png" alt="" class="review-img">
+                                        <div class="review-title">4 импланта Nobel и несъёмный протез</div>
+                                        <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
+                                        <a href="#" class="show-more">
+                                            <img src="assets/img/show-more.png" alt="">
+                                            Читать отзыв
+                                        </a>
+                                        <div class="play-btn">
+                                            <img src="assets/img/icon-play.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review-item">
+                                        <img src="assets/img/review3.png" alt="" class="review-img">
+                                        <div class="review-title">4 импланта Nobel и несъёмный протез</div>
+                                        <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
+                                        <a href="#" class="show-more">
+                                            <img src="assets/img/show-more.png" alt="">
+                                            Читать отзыв
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review-item">
+                                        <img src="assets/img/review3.png" alt="" class="review-img">
+                                        <div class="review-title">4 импланта Nobel и несъёмный протез</div>
+                                        <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
+                                        <a href="#" class="show-more">
+                                            <img src="assets/img/show-more.png" alt="">
+                                            Читать отзыв
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review-item">
+                                        <img src="assets/img/review3.png" alt="" class="review-img">
+                                        <div class="review-title">4 импланта Nobel и несъёмный протез</div>
+                                        <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
+                                        <a href="#" class="show-more">
+                                            <img src="assets/img/show-more.png" alt="">
+                                            Читать отзыв
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-nav">
+                                <span class="swiper-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13"
+                                        fill="none">
+                                        <path
+                                            d="M16 5.6H3.064L7.536 1.128L6.4 0L0 6.4L6.4 12.8L7.528 11.672L3.064 7.2H16V5.6Z"
+                                            fill="#53545D" />
+                                    </svg>
+                                </span>
+                                <span class="swiper-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13"
+                                        fill="none">
+                                        <path
+                                            d="M0 5.6H12.936L8.464 1.128L9.6 0L16 6.4L9.6 12.8L8.472 11.672L12.936 7.2H0V5.6Z"
+                                            fill="#53545D" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-ratings">
+                    <div class="rating-item">
+                        <div class="rating-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                        </div>
+                        <div class="rating-right">
+                            <img src="assets/img/rating-ya.png" alt="">
+                            5,0
+                        </div>
+                    </div>
+                    <div class="rating-item">
+                        <div class="rating-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                        </div>
+                        <div class="rating-right">
+                            <img src="assets/img/rating-2gic.png" alt="">
+                            5,0
+                        </div>
+                    </div>
+                    <div class="rating-item">
+                        <div class="rating-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15"
+                                fill="none">
+                                <path
+                                    d="M6.18113 1.31338C6.82124 -0.437774 9.2979 -0.437774 9.93801 1.31338L10.6104 3.15293C10.8987 3.94167 11.6491 4.4663 12.4889 4.4663H14.1154C16.1094 4.4663 16.8755 7.06465 15.2005 8.14639L14.3055 8.72436C13.5208 9.23116 13.1914 10.2137 13.5121 11.0911L13.9465 12.2794C14.6051 14.0813 12.5947 15.6869 10.983 14.6461L9.1446 13.4588C8.48413 13.0323 7.63501 13.0323 6.97454 13.4588L5.13616 14.6461C3.52448 15.6869 1.51401 14.0813 2.17269 12.2793L2.60704 11.0911C2.92775 10.2137 2.59837 9.23117 1.81363 8.72437L0.918673 8.14639C-0.756315 7.06466 0.00977898 4.4663 2.0037 4.4663H3.63027C4.47006 4.4663 5.2204 3.94167 5.50871 3.15293L6.18113 1.31338Z"
+                                    fill="#FFD000" />
+                            </svg>
+                        </div>
+                        <div class="rating-right">
+                            <img src="assets/img/rating-pro.png" alt="">
+                            5,0
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="consult implant">
+            <div class="container">
+                <div class="consult-row">
+                    <div class="consult-left">
+                        <h2 class="section_title">Получите расчет стоимости имплантации <span>с выгодой 70 000 ₽</span>
+                        </h2>
+
+                        <div class="question">
+                            <img src="assets/img/question-subtrac.png" alt="" class="question-subtrac">
+                            <div class="question-step">
+                                Шаг <span>1</span>/5
+                            </div>
+                            <div class="question-desc">Ответьте на 4 вопроса и получите расчёт + подарки от клиники
+                            </div>
+                            <div class="question-progress">
+                                <span class="progress-bar"></span>
+                            </div>
+                            <form class="question-row">
+                                <div class="question-scroll">
+                                    <div class="question-wrap">
+                                        <div class="question-item">
+                                            <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <div class="answer">
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="checkbox" checked>
+                                                    <p class="answer-text">Верхнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="checkbox">
+                                                    <p class="answer-text">Нижнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="checkbox">
+                                                    <p class="answer-text">Обе челюсти</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="checkbox">
+                                                    <p class="answer-text">Нужна консультация</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="question-item">
+                                            <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <div class="answer">
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio" checked>
+                                                    <p class="answe-text">Верхнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Нижнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Обе челюсти</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Нужна консультация</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="question-item">
+                                            <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <div class="answer">
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio" checked>
+                                                    <p class="answe-text">Верхнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Нижнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Обе челюсти</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Нужна консультация</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="question-item">
+                                            <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <div class="answer">
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio" checked>
+                                                    <p class="answe-text">Верхнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Нижнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Обе челюсти</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Нужна консультация</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="question-item">
+                                            <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <div class="answer">
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio" checked>
+                                                    <p class="answe-text">Верхнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Нижнюю</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Обе челюсти</p>
+                                                </label>
+                                                <label class="answer-item">
+                                                    <span class="radio"></span>
+                                                    <input type="radio">
+                                                    <p class="answe-text">Нужна консультация</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question-next">Далее</div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="consult-right">
+                        <h2 class="section_title">Получите расчет стоимости имплантации <span>с выгодой 70 000 ₽</span>
+                        </h2>
+                        <div class="consult-prices">
+                            <div class="price-item">
+                                <div class="price-texts">
+                                    <div class="price-title">Консультация <br> и КТ-диагностика</div>
+                                    <div class="price-count">0 ₽</div>
+                                    <p class="old-price">7 000 ₽</p>
+                                </div>
+                                <img src="assets/img/consult-subtrac4.png" alt="" class="price-subtrac">
+                            </div>
+                            <div class="price-item">
+                                <div class="price-texts">
+                                    <div class="price-title">Удаление <br> зубов</div>
+                                    <div class="price-count">0 ₽</div>
+                                    <p class="old-price">1 000 ₽</p>
+                                </div>
+                                <img src="assets/img/consult-subtrac5.png" alt="" class="price-subtrac">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <div class="contact-row">
+                    <div class="contact-left">
+                        <h2 class="section_title">Мы рядом — <span>прямо в центре Москвы</span></h2>
+                        <div class="map">
+                            <span class="map-subtrac"></span>
+                            <iframe
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaf23feac91a72e403d2b11ad2aefc4a854430fa111e5d998eadc30debeee7ae8&amp;source=constructor"
+                                width="640" height="400" frameborder="0"></iframe>
+                        </div>
+                        <div class="contact-swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/contact-slide1.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/contact-slide2.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/contact-slide1.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/contact-slide2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-nav">
+                                <span class="swiper-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13"
+                                        fill="none">
+                                        <path
+                                            d="M16 5.6H3.064L7.536 1.128L6.4 0L0 6.4L6.4 12.8L7.528 11.672L3.064 7.2H16V5.6Z"
+                                            fill="#53545D" />
+                                    </svg>
+                                </span>
+                                <span class="swiper-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13"
+                                        fill="none">
+                                        <path
+                                            d="M0 5.6H12.936L8.464 1.128L9.6 0L16 6.4L9.6 12.8L8.472 11.672L12.936 7.2H0V5.6Z"
+                                            fill="#53545D" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <h2 class="section_title">Мы рядом — <span>прямо в центре Москвы</span></h2>
+                        <div class="contact-items">
+                            <div class="contact-col">
+                                <div class="contact-item">
+                                    <p class="contact-text">Акция до 31 октября Удобное расположение, современный
+                                        интерьер и внимательный персонал - приходите в удобное для вас время</p>
+                                </div>
+                                <div class="contact-item">
+                                    <img src="assets/img/icon-metro.svg" alt="">
+                                    <div>
+                                        <p class="contact-text">Деловой центр</p>
+                                        <p class="contact-text-small">ул. Мантулинская, д. 9, к. 1</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <img src="assets/img/icon-metro.svg" alt="">
+                                    <div>
+                                        <p class="contact-text">Белорусская</p>
+                                        <p class="contact-text-small">пр-кт Ленинградский, д. 5, стр. 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-col">
+                                <div class="contact-item">
+                                    <a href="tel:+74951350073" class="contact-tel">+7 (495) 135-00-73</a>
+                                    <p>Работаем ежедневно: с 9:00 до 21:30</p>
+                                </div>
+                                <div class="contact-item">
+                                    <img src="assets/img/icon-metro.svg" alt="">
+                                    <div>
+                                        <p class="contact-text">Таганская</p>
+                                        <p class="contact-text-small">пер. Известковый, д. 3</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <img src="assets/img/icon-metro.svg" alt="">
+                                    <div>
+                                        <p class="contact-text">Парк культуры</p>
+                                        <p class="contact-text-small">ул. Льва Толстого, д. 5/1</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-get">Получить рассчет</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-row">
+                    <div class="footer-left">
+                        <a href="#" class="footer-logo">
+                            <img src="assets/img/header_logo.svg" alt="">
+                        </a>
+                        <div class="footer-links">
+                            <a href="#" class="footer-link">Лицензия и реквизиты</a>
+                            <a href="#" class="footer-link">Политика конфиденциальности</a>
+                        </div>
+                        <div class="footer-remind">
+                            <p class="remind">Обращаем ваше внимание, что данный сайт не является публичной офертой</p>
+                            <p class="remind">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ, НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-top">
+                            <a href="tel:+74952667614" class="footer-phone">+7 (495) 266-76-14</a>
+                            <p class="work-time">09:00-21:30</p>
+                        </div>
+                        <a href="#" class="call-back">Перезвоните мне</a>
+                        <div class="devalopers">
+                            <img src="assets/img/devalopers.png" alt="">
+                            <span></span>
+                            <p class="devalopers-text">Создание и продвижение <br> сайта для стоматологии</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal_content" id="step1">
+            <div class="modal_exit">
+                <img src="assets/img/mdal_exit.svg" alt="">
+            </div>
+            <div class="modal_info">
+                <div class="modal_title">
+                    Оставьте номер телефона
+                </div>
+                <p>Перезвоним в ближайшее время</p>
+                <ul class="modal_lists">
+                    <li><img src="assets/img/check.svg" alt=""><span> Ответим на все вопросы</span></li>
+                    <li><img src="assets/img/check.svg" alt=""><span>Подберём удобное время для консультации у
+                            врача</span></li>
+                </ul>
+            </div>
+            <form action="send.php" method="post" class="modal_form">
+                <div class="modal_form_title">
+                    Записаться
+                </div>
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" value="+7" class="modal_input">
+                <button class="button submits">Отправить</button>
+                <div class="modal_policy">
+                    <label class="modal_policy_label">
+                        <div class="custom_checkbox">
+                            <input type="checkbox" name="policy" />
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
+                                    fill="none">
+                                    <path d="M0.707108 6.48481L5.15155 10.9293L15.3738 0.707031" stroke="white"
+                                        stroke-width="2" />
+                                </svg>
+                            </span>
+                        </div>
+                        <span>Я согласен на «<a href="#">Обработку персональных данных</a>»</span>
+                    </label>
+                    <label class="modal_policy_label">
+                        <div class="custom_checkbox">
+                            <input type="checkbox" name="policy" />
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
+                                    fill="none">
+                                    <path d="M0.707108 6.48481L5.15155 10.9293L15.3738 0.707031" stroke="white"
+                                        stroke-width="2" />
+                                </svg>
+                            </span>
+                        </div>
+                        <span>
+                            Я ознакомлен и согласен с «<a href="#">Условиями сбора персональных данных</a>» в
+                            соответствии с «<a href="#">Политикой конфиденциальности</a>»
+                        </span>
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="modal_content wrap" id="step2">
+            <div class="modal_step_title">
+                Ответьте на 4 вопроса и получите расчёт + подарки от клиники
+            </div>
+            <div class="modal_exit">
+                <img src="assets/img/mdal_exit.svg" alt="">
+            </div>
+            <div class="flex_content">
+                <div class="modal_info">
+                    <div class="modal_title sm">
+                        Рассчёт стоимости лечения готов, <span>а подарки уже ваши! Оставьте номер вашего телефона</span>
+                    </div>
+
+                </div>
+                <form action="send.php" method="post" class="modal_form">
+                    <div class="modal_form_title">
+                        Записаться
+                    </div>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" value="+7" class="modal_input" name="phone">
+                    <button class="button">Отправить</button>
+                    <div class="modal_policy">
+                        <label class="modal_policy_label">
+                            <div class="custom_checkbox">
+                                <input type="checkbox" name="policy" />
+                                <span class="checkmark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
+                                        fill="none">
+                                        <path d="M0.707108 6.48481L5.15155 10.9293L15.3738 0.707031" stroke="white"
+                                            stroke-width="2" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <span>Я согласен на «<a href="#">Обработку персональных данных</a>»</span>
+                        </label>
+                        <label class="modal_policy_label">
+                            <div class="custom_checkbox">
+                                <input type="checkbox" name="policy" />
+                                <span class="checkmark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
+                                        fill="none">
+                                        <path d="M0.707108 6.48481L5.15155 10.9293L15.3738 0.707031" stroke="white"
+                                            stroke-width="2" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <span>
+                                Я ознакомлен и согласен с «<a href="#">Условиями сбора персональных данных</a>» в
+                                соответствии с «<a href="#">Политикой конфиденциальности</a>»
+                            </span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal_content" id="step3">
+            <div class="modal_exit">
+                <img src="assets/img/mdal_exit.svg" alt="">
+            </div>
+            <div class="modal_info">
+                <div class="modal_title">
+                    4 импланта Nobel <br> и несъёмный протез
+                </div>
+                <p>Установили за 1 визит</p>
+                <div class="modal_texts">
+                    <span>Lorem ipsum — условный, зачастую бессмысленный текст-заполнитель, который используют в макетах
+                        и дизайне печатных изданий и веб-страниц. Также его называют «текстом-рыбой» или плейсхолдером —
+                        «держателем места»</span>
+                    <span>Lorem ipsum — условный, зачастую бессмысленный текст-заполнитель, который используют в макетах
+                        и дизайне печатных изданий и веб-страниц. Также его называют «текстом-рыбой» или плейсхолдером —
+                        «держателем места» </span>
+                </div>
+            </div>
+            <div class="modal_img">
+                <img src="assets/img/modal_img.png" alt="">
+            </div>
+        </div>
     </div>
 
     <!-- scripts -->
-    <!--jquery  -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"
-        integrity="sha512-F5Ul1uuyFlGnIT1dk2c4kB4DBdi5wnBJjVhL7gQlGh46Xn0VhvD8kgxLtjdZ5YN83gybk/aASUAlpdoWUjRR3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <!-- main script -->
     <script src="assets/js/main.js"></script>
 </body>

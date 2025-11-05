@@ -1,20 +1,23 @@
-// media 
-@import 'media';
+// media
+@import "media";
 
 // settings
-@import 'settings';
+@import "settings";
 
 // sections
 // header
-@import 'header';
+@import "header";
 // hero
-@import 'hero';
+@import "hero";
 
 // restore
-@import 'restore';
+@import "restore";
 
 // inclusive
-@import 'inclusive';
+@import "inclusive";
 
 // Experts
-@import 'experts';
+@import "experts";
+@import "modal";
+@import "consult";
+@import "review";

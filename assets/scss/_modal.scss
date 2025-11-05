@@ -1,0 +1,330 @@
+.modal {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 122222;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+  &.active {
+    opacity: 1;
+    z-index: 122222;
+  }
+  &_title {
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    @media (max-width: 768px) {
+      font-size: 26px;
+    }
+    &.sm {
+      color: #000;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      max-width: 330px;
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+  &_lists {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+    @media (max-width: 768px) {
+      margin-top: 18px;
+      gap: 8px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      span {
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  &_info {
+    p {
+      margin-top: 12px;
+      color: #000;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      @media (max-width: 768px) {
+        font-size: 16px;
+        margin-top: 8px;
+      }
+    }
+  }
+  &_content {
+    padding: 36px;
+    border-radius: 30px;
+    border: 1px solid #f5f5f5;
+    background: #e9efff;
+    width: 100%;
+    max-width: 912px;
+    position: absolute;
+    inset: 0;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px 36px;
+    width: calc(100% - 30px);
+    margin: auto;
+    &.wrap {
+      flex-wrap: wrap;
+      background: #ffffff;
+    }
+    // &#step1,
+    &#step2 {
+      display: none;
+    }
+    &#step3 {
+      display: none;
+      @media (max-width: 768px) {
+        gap: 12px;
+        flex-direction: column-reverse;
+      }
+      .modal_exit {
+        top: 20px;
+        right: 20px;
+      }
+      .modal_img {
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+        img {
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .flex_content {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (max-width: 992px) {
+      padding: 24px;
+      gap: 16px;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+    @media (max-width: 556px) {
+      padding: 18px 16px;
+    }
+  }
+  &_exit {
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    display: flex;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    cursor: pointer;
+  }
+  &_texts {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 32px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-top: 16px;
+      gap: 16px;
+    }
+  }
+  &_form {
+    border-radius: 20px;
+    background: #fff;
+    padding: 36px;
+    max-width: 485px;
+    width: 100%;
+    @media (max-width: 992px) {
+      padding: 24px;
+      max-width: 430px;
+    }
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+    @media (max-width: 556px) {
+      padding: 18px 16px;
+    }
+    &_title {
+      color: #000;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      @media (max-width: 556px) {
+        font-size: 18px;
+      }
+    }
+  }
+  &_input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #000;
+    margin-top: 50px;
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    @media (max-width: 768px) {
+      padding-bottom: 16px;
+      font-size: 24px;
+    }
+    @media (max-width: 556px) {
+      font-size: 18px;
+      margin-top: 32px;
+      padding-bottom: 10px;
+    }
+    &::placeholder {
+      color: #dedede;
+    }
+  }
+  &_step_title {
+    padding-bottom: 31px;
+    border-bottom: 1px solid rgba(233, 239, 255, 1);
+    position: relative;
+    width: 100%;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 10%;
+      height: 1px;
+      background: #4060aa;
+    }
+  }
+  button {
+    border-radius: 20px;
+    background: #4060aa;
+    display: flex;
+    width: fit-content;
+    padding: 24px 32px;
+    justify-content: center;
+    min-width: 239px;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 24px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    @media (max-width: 768px) {
+      padding: 16px 24px;
+      margin-top: 16px;
+      min-width: 100%;
+      font-size: 14px;
+    }
+  }
+  .custom_checkbox {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    flex: 0 0 auto;
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      border: 1px solid #4060aa;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      &::after {
+        display: none;
+      }
+      svg {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+    }
+
+    input:checked + .checkmark {
+      background: #4060aa;
+      border-color: #4060aa;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+  &_policy {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @media (max-width: 768px) {
+      gap: 8px;
+      margin-top: 16px;
+    }
+    &_label {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      span {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+        a {
+          color: #4060aa;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
