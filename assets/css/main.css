@@ -2001,6 +2001,14 @@ header .lc_row .header_actions .header_menu svg {
 .experts .expert_item:last-child {
   margin: 0;
 }
+.experts .expert_item:nth-child(2) .item_work {
+  margin-bottom: 18px;
+}
+@media (max-width: 768px) {
+  .experts .expert_item:nth-child(2) .item_work {
+    margin-bottom: 0;
+  }
+}
 .experts .expert_human {
   position: relative;
   display: flex;

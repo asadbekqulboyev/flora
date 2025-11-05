@@ -99,9 +99,16 @@
         border-radius: 20px 20px 33px 33px;
         background: #7087BF;
         margin: 0 30px 0 0;
-
         &:last-child{
             margin: 0;
+        }
+        &:nth-child(2){
+            .item_work{
+                margin-bottom: 18px;
+                @media (max-width: 768px){
+                    margin-bottom: 0;
+                }
+            }
         }
     }
     .expert_human{
