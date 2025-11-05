@@ -2620,6 +2620,9 @@ header .lc_row .header_actions .header_menu svg {
 .consult-right .section_title {
   display: none;
 }
+.consult-right .sec_desc {
+  display: none;
+}
 .consult .section_title {
   max-width: 640px;
   width: 100%;
