@@ -345,7 +345,7 @@
                                     </span>
                                 </div>
                                 <!-- white btn -->
-                                <div class="white_btn cream_btn">Получить рассчет</div>
+                                <div class="white_btn cream_btn modal_open">Получить рассчет</div>
                             </div>
                         </div>
                     </div>
@@ -618,13 +618,13 @@
                         <div class="item_title">
                             Записаться
                         </div>
-                        <input type="tel" placeholder="+7 (___) ___-__-__" name="phone">
+                        <input type="tel" placeholder="+7 (___) ___-__-__" name="phone" require>
                         <!-- item btn -->
                         <button class="white_btn blue_btn">Получить рассчет</button>
                         <!-- Politics -->
                         <div class="politics">
                             <label class="custom-checkbox">
-                                <input type="checkbox" name="policy" checked>
+                                <input type="checkbox" name="policy" checked required>
                                 <span class="checkmark"></span>
                             </label>
                             <span>
@@ -949,18 +949,18 @@
                         <p class="sec_desc">к ведущим врачам по доступной цене</p>
 
                         <div class="consult-left__items">
-                            <form action="" class="final_calculation">
+                            <form action="send.php" class="final_calculation">
                                 <!-- item title -->
                                 <div class="item_title">
                                     Записаться на бесплатную консультацию сейчас
                                 </div>
-                                <input type="text" id="phone" placeholder="+7 (___) ___-__-__" class="phone-input">
+                                <input type="text" id="phone" placeholder="+7 (___) ___-__-__" class="phone-input" required>
                                 <!-- item btn -->
                                 <a href="#" class="white_btn blue_btn">Получить рассчет</a>
                                 <!-- Politics -->
                                 <div class="politics">
                                     <label class="custom-checkbox">
-                                        <input type="checkbox">
+                                        <input type="checkbox" required>
                                         <span class="checkmark"></span>
                                     </label>
                                     <span>
@@ -1254,22 +1254,22 @@
                                             <div class="answer">
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="checkbox" checked>
+                                                    <input type="checkbox" checked required>
                                                     <p class="answer-text">Верхнюю</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="checkbox">
+                                                    <input type="checkbox" checked required>
                                                     <p class="answer-text">Нижнюю</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="checkbox">
+                                                    <input type="checkbox" checked required>
                                                     <p class="answer-text">Обе челюсти</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="checkbox">
+                                                    <input type="checkbox" checked required>
                                                     <p class="answer-text">Нужна консультация</p>
                                                 </label>
                                             </div>
@@ -1279,7 +1279,7 @@
                                             <div class="answer">
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio" checked>
+                                                    <input type="radio" checked required>
                                                     <p class="answe-text">Верхнюю</p>
                                                 </label>
                                                 <label class="answer-item">
@@ -1554,12 +1554,12 @@
                 <div class="modal_form_title">
                     Записаться
                 </div>
-                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" value="+7" class="modal_input">
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" value="+7" class="modal_input" require>
                 <button class="button submits">Отправить</button>
                 <div class="modal_policy">
                     <label class="modal_policy_label">
                         <div class="custom_checkbox">
-                            <input type="checkbox" name="policy" />
+                            <input type="checkbox" name="policy" checked  required/>
                             <span class="checkmark">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
                                     fill="none">
@@ -1572,7 +1572,7 @@
                     </label>
                     <label class="modal_policy_label">
                         <div class="custom_checkbox">
-                            <input type="checkbox" name="policy" />
+                            <input type="checkbox" name="policy" required checked/>
                             <span class="checkmark">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
                                     fill="none">
@@ -1607,12 +1607,12 @@
                     <div class="modal_form_title">
                         Записаться
                     </div>
-                    <input type="tel" placeholder="+7 (___) ___-__-__" value="+7" class="modal_input" name="phone">
+                    <input type="tel" placeholder="+7 (___) ___-__-__" value="+7" class="modal_input" name="phone" required>
                     <button class="button">Отправить</button>
                     <div class="modal_policy">
                         <label class="modal_policy_label">
                             <div class="custom_checkbox">
-                                <input type="checkbox" name="policy" />
+                                <input type="checkbox" name="policy" required  checked/>
                                 <span class="checkmark">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
                                         fill="none">
@@ -1625,7 +1625,7 @@
                         </label>
                         <label class="modal_policy_label">
                             <div class="custom_checkbox">
-                                <input type="checkbox" name="policy" />
+                                <input type="checkbox" name="policy" required checked />
                                 <span class="checkmark">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
                                         fill="none">

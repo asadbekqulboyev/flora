@@ -24,20 +24,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // modal send backend
+  // modal send backend
   document.addEventListener("DOMContentLoaded", () => {
-    // Sahifadagi barcha <form> elementlarni topamiz
     const forms = document.querySelectorAll("form");
 
     forms.forEach((form) => {
-      const button = form.querySelector("button"); // har bir formaning o‘z tugmasi
+      const button = form.querySelector("button");
+      const checkbox = form.querySelector('input[type="checkbox"]');
+
+      // === Agar formda checkbox bo‘lsa, tugmani boshida bloklaymiz ===
+      if (checkbox && button) {
+        button.disabled = !checkbox.checked;
+
+        // Checkbox o‘zgarishini kuzatamiz
+        checkbox.addEventListener("change", () => {
+          button.disabled = !checkbox.checked;
+        });
+      }
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        // Tugma matnini o'zgartirish
+        // === Agar checkbox bo‘lsa va belgilanmagan bo‘lsa — yubormaymiz ===
+        if (checkbox && !checkbox.checked) {
+          alert("Iltimos, shartlarga rozilikni belgilang ✅");
+          return;
+        }
+
+        // === Inputlar tekshiruvi (faqat checkbox bo‘lmagan formalar uchun) ===
+        if (!checkbox) {
+          const inputs = form.querySelectorAll(
+            "input[required], textarea[required], select[required]"
+          );
+          for (let input of inputs) {
+            if (!input.value.trim()) {
+              alert("Iltimos, barcha majburiy maydonlarni to‘ldiring!");
+              return;
+            }
+          }
+        }
+
+        // === Endi yuborish jarayoni ===
         if (button) button.textContent = "Подождите...";
 
-        // Formadagi barcha inputlarni avtomatik yig‘amiz
         const formData = new FormData(form);
 
         try {
@@ -47,11 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
           });
 
           if (response.ok) {
-            // Agar muvaffaqiyatli yuborilsa:
             if (button) button.textContent = "Отправлено ✅";
             form.reset();
 
-            // Modal yoki overlay bor bo‘lsa, yopamiz
+            // Agar checkbox bo‘lsa, yana tugmani disable qilamiz
+            if (checkbox && button) button.disabled = true;
+
             const modal = form.closest(".modal_content");
             if (modal) {
               modal.classList.add("success");
@@ -74,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Barcha modal chiqish (yopish) tugmalariga hodisa qo‘shamiz
+    // Modalni yopish tugmalari
     document.querySelectorAll(".modal_exit").forEach((exitBtn) => {
       exitBtn.addEventListener("click", () => {
         const modal = exitBtn.closest(".modal_content");
@@ -82,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
   const reviewSwiperEl = document.querySelector(".review-swiper");
 
   if (reviewSwiperEl) {
