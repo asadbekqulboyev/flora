@@ -1,7 +1,7 @@
 <?php
 require 'assets/PHPMailer/PHPMailer.php';
 require 'assets/PHPMailer/SMTP.php';
-$phone = $_POST['phone'];
+
 $mail = new PHPMailer(true);
 
 try {
@@ -20,10 +20,51 @@ try {
     $mail->setFrom('otpravitelpisem2021@yandex.ru', 'PTS');
     $mail->addAddress('asadbekqulboyev1207@gmail.com', 'Asadbek');     
 
-    //Content
-    $mail->isHTML(true);                                   
-    $mail->Subject = 'Phone';
-    $mail->Body    = "Phone: $phone ";
+    if (!empty($_POST['phone'])) {
+        
+        $phone = htmlspecialchars($_POST['phone']);
+
+        $mail->isHTML(true);
+        $mail->Subject = 'Заявка с телефона';
+        $mail->Body    = "<b>Телефон:</b> $phone";
+
+    } elseif (!empty($_POST['answer1'])) {
+        $questionsHTML = '';
+
+        foreach ($_POST as $key => $value) {
+            if (preg_match('/^question(\d+)$/', $key, $match)) {
+                $num = $match[1];
+                $question = htmlspecialchars($value);
+                $answerKey = 'answer' . $num;
+                $answer = isset($_POST[$answerKey]) ? htmlspecialchars($_POST[$answerKey]) : '—';
+                $questionsHTML .= "
+                    <tr>
+                        <td style='padding:8px 12px;border:1px solid #ddd;'>$question</td>
+                        <td style='padding:8px 12px;border:1px solid #ddd;'>$answer</td>
+                    </tr>
+                ";
+            }
+        }
+
+        $mail->isHTML(true);
+        $mail->Subject = 'Новая анкета с квиза';
+        $mail->Body = "
+            <h2>Новая анкета с сайта</h2>
+            <table style='border-collapse:collapse;width:100%;border:1px solid #ccc;'>
+                <thead>
+                    <tr style='background:#f5f5f5;'>
+                        <th style='padding:8px;border:1px solid #ccc;'>Вопрос</th>
+                        <th style='padding:8px;border:1px solid #ccc;'>Ответ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    $questionsHTML
+                </tbody>
+            </table>
+        ";
+    } else {
+        exit('Неверные данные формы.');
+    }
 
     $mail->send();
     echo 'Message has been sent';

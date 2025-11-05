@@ -949,18 +949,19 @@
                         <p class="sec_desc">к ведущим врачам по доступной цене</p>
 
                         <div class="consult-left__items">
-                            <form action="send.php" class="final_calculation">
+                            <form action="send.php" class="final_calculation" method="post">
                                 <!-- item title -->
                                 <div class="item_title">
                                     Записаться на бесплатную консультацию сейчас
                                 </div>
-                                <input type="text" id="phone" placeholder="+7 (___) ___-__-__" class="phone-input" required>
+                                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" class="phone-input"
+                                    required>
                                 <!-- item btn -->
-                                <a href="#" class="white_btn blue_btn">Получить рассчет</a>
+                                <button class="white_btn blue_btn">Получить рассчет</button>
                                 <!-- Politics -->
                                 <div class="politics">
                                     <label class="custom-checkbox">
-                                        <input type="checkbox" required>
+                                        <input type="checkbox" name="politics" required checked>
                                         <span class="checkmark"></span>
                                     </label>
                                     <span>
@@ -1251,126 +1252,135 @@
                                     <div class="question-wrap">
                                         <div class="question-item">
                                             <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <input type="hidden" name="question1"
+                                                value="Какую челюсть нужно восстановить?">
                                             <div class="answer">
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="checkbox" checked required>
+                                                    <input type="radio" checked required name="answer1" value="Верхнюю">
                                                     <p class="answer-text">Верхнюю</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="checkbox" checked required>
+                                                    <input type="radio" name="answer1" value="Нижнюю">
                                                     <p class="answer-text">Нижнюю</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="checkbox" checked required>
+                                                    <input type="radio" name="answer1" value="Обе челюсти">
                                                     <p class="answer-text">Обе челюсти</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="checkbox" checked required>
+                                                    <input type="radio" name="answer1" value="Нужна консультация">
                                                     <p class="answer-text">Нужна консультация</p>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="question-item">
-                                            <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <div class="question-title">Какой тип протеза вы рассматриваете?</div>
+                                            <input type="hidden" name="question2"
+                                                value="Какой тип протеза вы рассматриваете?">
                                             <div class="answer">
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio" checked required>
-                                                    <p class="answe-text">Верхнюю</p>
+                                                    <input type="radio" required name="answer2" value="Несъёмный">
+                                                    <p class="answe-text">Несъёмный</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Нижнюю</p>
+                                                    <input type="radio" name="answer2" value="Съёмный">
+                                                    <p class="answe-text">Съёмный</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Обе челюсти</p>
+                                                    <input type="radio" name="answer2" value="Ещё не решил">
+                                                    <p class="answe-text">Ещё не решил</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Нужна консультация</p>
+                                                    <input type="radio" name="answer2" value="Хочу узнать у врача.">
+                                                    <p class="answe-text">Хочу узнать у врача.</p>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="question-item">
-                                            <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <div class="question-title">Сколько у вас осталось зубов?</div>
+                                            <input type="hidden" name="question3" value="Сколько у вас осталось зубов?">
                                             <div class="answer">
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio" checked>
-                                                    <p class="answe-text">Верхнюю</p>
+                                                    <input type="radio" required name="answer3" value="Все отсутствуют">
+                                                    <p class="answe-text">Все отсутствуют.</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Нижнюю</p>
+                                                    <input type="radio" name="answer3" value="Меньше половины">
+                                                    <p class="answe-text">Меньше половины</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Обе челюсти</p>
+                                                    <input type="radio" name="answer3" value="Больше половины">
+                                                    <p class="answe-text">Больше половины</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Нужна консультация</p>
+                                                    <input type="radio" name="answer3" value="Все на месте">
+                                                    <p class="answe-text">Все на месте</p>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="question-item">
-                                            <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <div class="question-title">Были ли у вас импланты ранее?</div>
+                                            <input type="hidden" name="question4" value="Были ли у вас импланты ранее?">
                                             <div class="answer">
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio" checked>
-                                                    <p class="answe-text">Верхнюю</p>
+                                                    <input type="radio" required name="answer4"
+                                                        value="Да, стоят сейчас">
+                                                    <p class="answe-text">Да, стоят сейчас</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Нижнюю</p>
+                                                    <input type="radio" name="answer4" value="Да, но удалили">
+                                                    <p class="answe-text">Да, но удалили</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Обе челюсти</p>
+                                                    <input type="radio" name="answer4" value="Нет, не было">
+                                                    <p class="answe-text">Нет, не было</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Нужна консультация</p>
+                                                    <input type="radio" name="answer4" value="Не знаю">
+                                                    <p class="answe-text">Не знаю</p>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="question-item">
-                                            <div class="question-title">Какую челюсть нужно восстановить?</div>
+                                            <div class="question-title">Когда планируете лечение?</div>
+                                            <input type="hidden" name="question5" value="Когда планируете лечение?">
                                             <div class="answer">
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio" checked>
-                                                    <p class="answe-text">Верхнюю</p>
+                                                    <input type="radio" required name="answer5"
+                                                        value="В ближайшее время">
+                                                    <p class="answe-text">В ближайшее время</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Нижнюю</p>
+                                                    <input type="radio" name="answer5" value="Через 1–2 месяца">
+                                                    <p class="answe-text">Через 1–2 месяца</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Обе челюсти</p>
+                                                    <input type="radio" name="answer5" value="Позже">
+                                                    <p class="answe-text">Позже</p>
                                                 </label>
                                                 <label class="answer-item">
                                                     <span class="radio"></span>
-                                                    <input type="radio">
-                                                    <p class="answe-text">Нужна консультация</p>
+                                                    <input type="radio" name="answer5" value="Пока просто интересуюсь">
+                                                    <p class="answe-text">Пока просто интересуюсь</p>
                                                 </label>
                                             </div>
                                         </div>
@@ -1559,7 +1569,7 @@
                 <div class="modal_policy">
                     <label class="modal_policy_label">
                         <div class="custom_checkbox">
-                            <input type="checkbox" name="policy" checked  required/>
+                            <input type="checkbox" name="policy" checked required />
                             <span class="checkmark">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
                                     fill="none">
@@ -1572,7 +1582,7 @@
                     </label>
                     <label class="modal_policy_label">
                         <div class="custom_checkbox">
-                            <input type="checkbox" name="policy" required checked/>
+                            <input type="checkbox" name="policy" required checked />
                             <span class="checkmark">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
                                     fill="none">
@@ -1607,12 +1617,13 @@
                     <div class="modal_form_title">
                         Записаться
                     </div>
-                    <input type="tel" placeholder="+7 (___) ___-__-__" value="+7" class="modal_input" name="phone" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" value="+7" class="modal_input" name="phone"
+                        required>
                     <button class="button">Отправить</button>
                     <div class="modal_policy">
                         <label class="modal_policy_label">
                             <div class="custom_checkbox">
-                                <input type="checkbox" name="policy" required  checked/>
+                                <input type="checkbox" name="policy" required checked />
                                 <span class="checkmark">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
                                         fill="none">
@@ -1666,7 +1677,6 @@
             </div>
         </div>
     </div>
-
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
