@@ -2637,6 +2637,13 @@ header .lc_row .header_actions .header_menu svg {
 .consult .sec_desc {
   max-width: 200px;
   text-align: right;
+  color: #000;
+  text-align: right;
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
 }
 .consult-subtrac {
   position: absolute;
@@ -2847,6 +2854,16 @@ header .lc_row .header_actions .header_menu svg {
 }
 .review .section_title span {
   text-align: right;
+  width: 100%;
+  display: block;
+  padding-right: 30px;
+}
+.review .sec_desc {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
 }
 .review-items {
   display: flex;
