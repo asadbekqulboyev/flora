@@ -10,7 +10,7 @@ header {
       max-width: 198px;
       max-height: 54px;
       @media (max-width: 556px) {
-        max-width: 40%;
+        max-width: 33%;
       }
       img {
         width: 100%;
@@ -29,6 +29,9 @@ header {
       }
       @media (max-width: 556px) {
         gap: 0 18px;
+      }
+      @media (max-width: 390px) {
+        gap: 0 10px;
       }
       .header_info {
         display: flex;

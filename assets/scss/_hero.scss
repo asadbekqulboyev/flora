@@ -66,6 +66,9 @@
           max-width: 189px;
           border-radius: 12.56px;
         }
+        @media (max-width: 400px) {
+          max-width: 151px;
+        }
 
         .item_img {
           width: 100%;
@@ -128,6 +131,9 @@
         @media (max-width: 556px) {
           max-width: calc(55% - 15px);
         }
+        @media (max-width: 400px) {
+          max-width: calc(54% - 15px);
+        }
         li {
           display: flex;
           align-items: center;
@@ -145,6 +151,14 @@
           @media (max-width: 556px) {
             min-height: 61px;
             border-radius: 18px;
+          }
+          @media (max-width: 400px) {
+            padding: 8px 16px;
+            min-height: 55px;
+          }
+          @media (max-width: 375px) {
+            padding: 6px 16px;
+            min-height: 48px;
           }
 
           span {
@@ -181,7 +195,7 @@
         line-height: 100%; /* 70px */
         max-width: 424px;
         &.mobile_none {
-          @media (max-height: 1024px) {
+          @media (max-width: 1024px) {
             display: none;
           }
         }
@@ -370,6 +384,9 @@
         font-style: normal;
         font-weight: 700;
         line-height: 100%;
+        @media (max-width: 390px) {
+          font-size: 40px;
+        }
         span {
           color: #4060aa;
           display: block;
