@@ -71,6 +71,10 @@
   &-right {
     max-width: 43%;
     width: 100%;
+    .section_title,
+    .sec_desc {
+      display: none;
+    }
   }
   &-swiper {
     .review-item {
@@ -648,9 +652,9 @@
     }
     .swiper-nav {
       margin: 32px 0 0 0;
-    //   @media (max-width: 768px) {
-    //     margin-top: 16px;
-    //   }
+      //   @media (max-width: 768px) {
+      //     margin-top: 16px;
+      //   }
     }
     .contact-tel {
       font-size: 24px;
@@ -836,15 +840,15 @@
       }
     }
   }
-  
-@media (min-width: 576px) {
+
+  @media (min-width: 576px) {
     .container {
       padding-left: 32px;
       padding-right: 32px;
       max-width: 540px;
     }
   }
-  
+
   @media (min-width: 768px) {
     .container {
       max-width: 720px;
@@ -852,13 +856,13 @@
       padding-right: 20px;
     }
   }
-  
+
   @media (min-width: 992px) {
     .container {
       max-width: 960px;
     }
   }
-  
+
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px;
@@ -869,5 +873,4 @@
       max-width: 1320px;
     }
   }
-  
 }

@@ -2890,6 +2890,10 @@ header .lc_row .header_actions .header_menu svg {
   max-width: 43%;
   width: 100%;
 }
+.review-right .section_title,
+.review-right .sec_desc {
+  display: none;
+}
 .review-swiper .review-item {
   width: 100%;
 }
