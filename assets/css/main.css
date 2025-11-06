@@ -245,6 +245,22 @@ body {
   cursor: pointer;
 }
 
+.sec_desc {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: #000;
+}
+
+.contact-item:has(.contact-tel) p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  color: #8B8B8B;
+}
+
 @media (max-width: 576px) {
   .container {
     padding-left: 32px;
@@ -267,7 +283,12 @@ header .lc_row .header_logo {
 }
 @media (max-width: 556px) {
   header .lc_row .header_logo {
-    max-width: 33%;
+    max-width: 41%;
+  }
+}
+@media (max-width: 556px) {
+  header .lc_row .header_logo {
+    max-width: 41%;
   }
 }
 header .lc_row .header_logo img {
@@ -433,6 +454,11 @@ header .lc_row .header_actions .header_menu svg {
     border-radius: 12.56px;
   }
 }
+@media (max-width: 556px) {
+  .hero .lc_row .left_side .all_on {
+    top: 13.5px;
+  }
+}
 @media (max-width: 400px) {
   .hero .lc_row .left_side .all_on {
     max-width: 151px;
@@ -451,6 +477,11 @@ header .lc_row .header_actions .header_menu svg {
   .hero .lc_row .left_side .all_on .item_img {
     margin-bottom: 10px;
     padding: 10px 13px;
+  }
+}
+@media (max-width: 556px) {
+  .hero .lc_row .left_side .all_on .item_img {
+    max-height: 113.252px;
   }
 }
 .hero .lc_row .left_side .all_on .item_img img {
@@ -781,7 +812,7 @@ header .lc_row .header_actions .header_menu svg {
 @media (max-width: 1024px) {
   .hero .lc_row .mobile_show {
     display: flex;
-    margin-top: 32px;
+    margin-top: 28px;
     flex-direction: column;
     gap: 0px;
   }
@@ -810,6 +841,11 @@ header .lc_row .header_actions .header_menu svg {
   font-weight: 600;
   line-height: 120%;
   text-align: left;
+}
+@media (max-width: 556px) {
+  .hero .lc_row .mobile_show .item_text {
+    padding-top: 6px;
+  }
 }
 @media (max-width: 1024px) {
   .hero .lc_row .mobile_none {
@@ -1252,6 +1288,12 @@ header .lc_row .header_actions .header_menu svg {
   width: 100%;
   max-width: 640px;
 }
+@media (max-width: 556px) {
+  .inclusive .title_info .section_title span {
+    text-align: left;
+    max-width: 244px;
+  }
+}
 .inclusive .title_info .countrys_item {
   position: relative;
   padding: 113.75px 36px 36px 36px;
@@ -1435,6 +1477,16 @@ header .lc_row .header_actions .header_menu svg {
     top: 24px;
   }
 }
+@media (max-width: 768px) {
+  .inclusive .lc_row .stage_item .valid_item {
+    right: 26px;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+  }
+}
 .inclusive .lc_row .stage_item .item_number {
   color: #4060aa;
   font-size: 21px;
@@ -1577,6 +1629,11 @@ header .lc_row .header_actions .header_menu svg {
     font-size: 14px;
   }
 }
+@media (max-width: 556px) {
+  .inclusive .lc_row .stage_item .methods .method_item .left_side .method_name {
+    font-size: 16px;
+  }
+}
 .inclusive .lc_row .stage_item .methods .method_item .left_side .method_price {
   color: #000;
   font-size: 24px;
@@ -1674,7 +1731,7 @@ header .lc_row .header_actions .header_menu svg {
   width: 32px;
   height: 32px;
 }
-.inclusive .lc_row .stage_item .pay_informations li .pay_info .span {
+.inclusive .lc_row .stage_item .pay_informations li .pay_info span {
   color: #000;
   font-size: 16px;
   font-style: normal;
@@ -1682,7 +1739,7 @@ header .lc_row .header_actions .header_menu svg {
   line-height: 120%;
 }
 @media (max-width: 556px) {
-  .inclusive .lc_row .stage_item .pay_informations li .pay_info .span {
+  .inclusive .lc_row .stage_item .pay_informations li .pay_info span {
     font-size: 14px;
   }
 }
@@ -3376,6 +3433,13 @@ header .lc_row .header_actions .header_menu svg {
   flex-direction: column;
   background: #e9efff;
 }
+.contact-item:has(.contact-tel) p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  color: #8B8B8B;
+}
 .contact-text {
   font-size: 16px;
   font-weight: 400;
@@ -3508,6 +3572,7 @@ header .lc_row .header_actions .header_menu svg {
   flex-direction: column;
   align-items: flex-end;
   gap: 32px;
+  margin: -20px 0 0 0;
 }
 .footer-logo {
   display: flex;

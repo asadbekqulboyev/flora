@@ -198,6 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     if (response.ok) {
                         nextBtn.textContent = "Отправлено";
+                        // document.querySelector('.modal').classList.add('active')
                     } else {
                         nextBtn.textContent = "Ошибка";
                         nextBtn.disabled = false;

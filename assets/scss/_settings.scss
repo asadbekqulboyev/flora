@@ -229,6 +229,21 @@ body {
   cursor: pointer;
 }
 
+.sec_desc {
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%;
+	color: #000;
+}
+.contact-item:has(.contact-tel) p{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    color: #8B8B8B;
+}
+
 @media (max-width: 576px) {
   .container {
     padding-left: 32px;

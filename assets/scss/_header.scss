@@ -10,7 +10,10 @@ header {
       max-width: 198px;
       max-height: 54px;
       @media (max-width: 556px) {
-        max-width: 33%;
+        max-width: 41%;
+      }
+      @media (max-width: 556px) {
+        max-width: 41%;
       }
       img {
         width: 100%;

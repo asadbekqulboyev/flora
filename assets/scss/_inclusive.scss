@@ -22,6 +22,10 @@
         display: block;
         width: 100%;
         max-width: 640px;
+        @media (max-width: 556px) {
+          text-align: left;
+          max-width: 244px;
+        }
       }
     }
     .countrys_item {
@@ -185,6 +189,14 @@
         @media (max-width: 992px) {
           top: 24px;
         }
+        @media (max-width: 768px) {
+          right: 26px;
+          color: #fff;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+        }
       }
       .item_number {
         color: #4060aa;
@@ -305,6 +317,9 @@
               @media (max-width: 992px) {
                 font-size: 14px;
               }
+              @media (max-width: 556px) {
+                font-size: 16px;
+              }
             }
             .method_price {
               color: #000;
@@ -401,7 +416,7 @@
               width: 32px;
               height: 32px;
             }
-            .span {
+            span {
               color: #000;
               font-size: 16px;
               font-style: normal;
