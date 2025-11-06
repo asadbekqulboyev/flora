@@ -202,7 +202,6 @@ body {
   line-height: 120%;
   color: #000;
   text-decoration: none;
-
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -210,6 +209,7 @@ body {
   background: #fff;
   backdrop-filter: blur(22px);
   padding: 24px;
+  cursor: pointer;
 }
 
 .swiper-nav {

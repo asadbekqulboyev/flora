@@ -225,6 +225,7 @@ body {
   background: #fff;
   backdrop-filter: blur(22px);
   padding: 24px;
+  cursor: pointer;
 }
 
 .swiper-nav {
@@ -392,6 +393,7 @@ header .lc_row .header_actions .header_menu svg {
   top: -55px;
   max-width: 640px;
   max-height: 838px;
+  overflow: hidden;
 }
 @media (max-width: 1200px) {
   .hero .lc_row .left_side {
@@ -444,6 +446,7 @@ header .lc_row .header_actions .header_menu svg {
   background: #fff;
   backdrop-filter: blur(22px);
   padding: 19.07px 19.07px 19.4px 19.07px;
+  max-width: 240px;
 }
 @media (max-width: 992px) {
   .hero .lc_row .left_side .all_on {
@@ -472,6 +475,7 @@ header .lc_row .header_actions .header_menu svg {
   padding: 12.715px 17.483px 12.715px 17.484px;
   margin-bottom: 13.51px;
   max-height: 142.252px;
+  overflow: hidden;
 }
 @media (max-width: 992px) {
   .hero .lc_row .left_side .all_on .item_img {

@@ -11,7 +11,7 @@
 
 <body>
     <!-- wrapper -->
-     
+
     <div class="wrapper">
         <!-- hero -->
         <section class="hero">
@@ -65,8 +65,27 @@
                         <!-- all on -->
                         <div class="all_on">
                             <!-- item img -->
-                            <div class="item_img">
-                                <img src="assets/img/implant.png" alt="">
+                            <div class="item_img swiper hero_slide">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="assets/img/implant.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/img/implant.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/img/implant.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/img/implant.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/img/implant.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/img/implant.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                             <!-- item text -->
                             <div class="item_text">
@@ -1012,26 +1031,28 @@
             <div class="container">
                 <div class="review-row">
                     <div class="review-left">
-                        <h2 class="section_title">Мы говорим <br> о качестве, <span>пациенты <br> — о результате</span></h2>
-                        <p class="sec_desc">Присоединяйтесь к сотням пациентов, чьи <br> истории доказывают, что доверие оправдано</p>
+                        <h2 class="section_title">Мы говорим <br> о качестве, <span>пациенты <br> — о результате</span>
+                        </h2>
+                        <p class="sec_desc">Присоединяйтесь к сотням пациентов, чьи <br> истории доказывают, что доверие
+                            оправдано</p>
                         <div class="review-items">
                             <div class="review-item">
                                 <img src="assets/img/review1.png" alt="" class="review-img">
                                 <div class="review-title">4 импланта Nobel <br> и несъёмный протез</div>
                                 <div class="review-desc">Установили за 1 визит</div>
-                                <a href="#" class="show-more">
+                                <div  class="show-more modal_open2">
                                     <img src="assets/img/show-more.png" alt="">
                                     Читать отзыв
-                                </a>
+                                </div>
                             </div>
                             <div class="review-item">
                                 <img src="assets/img/review2.png" alt="" class="review-img">
                                 <div class="review-title">Установили за 2 визита</div>
                                 <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
-                                <a href="#" class="show-more">
+                                <div class="show-more modal_open2">
                                     <img src="assets/img/show-more.png" alt="">
                                     Читать отзыв
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1046,7 +1067,7 @@
                                         <img src="assets/img/review3.png" alt="" class="review-img">
                                         <div class="review-title">4 импланта Nobel и несъёмный протез</div>
                                         <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
-                                        <a href="#" class="show-more">
+                                        <a href="#" class="show-more modal_open2">
                                             <img src="assets/img/show-more.png" alt="">
                                             Читать отзыв
                                         </a>
@@ -1060,7 +1081,7 @@
                                         <img src="assets/img/review3.png" alt="" class="review-img">
                                         <div class="review-title">4 импланта Nobel и несъёмный протез</div>
                                         <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
-                                        <a href="#" class="show-more">
+                                        <a href="#" class="show-more modal_open2">
                                             <img src="assets/img/show-more.png" alt="">
                                             Читать отзыв
                                         </a>
@@ -1071,7 +1092,7 @@
                                         <img src="assets/img/review3.png" alt="" class="review-img">
                                         <div class="review-title">4 импланта Nobel и несъёмный протез</div>
                                         <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
-                                        <a href="#" class="show-more">
+                                        <a href="#" class="show-more modal_open2">
                                             <img src="assets/img/show-more.png" alt="">
                                             Читать отзыв
                                         </a>
@@ -1082,7 +1103,7 @@
                                         <img src="assets/img/review3.png" alt="" class="review-img">
                                         <div class="review-title">4 импланта Nobel и несъёмный протез</div>
                                         <div class="review-desc">Несъёмный протез на 4-х имплантах Osstem</div>
-                                        <a href="#" class="show-more">
+                                        <a href="#" class="show-more modal_open2">
                                             <img src="assets/img/show-more.png" alt="">
                                             Читать отзыв
                                         </a>
@@ -1236,8 +1257,6 @@
                     <div class="consult-left">
                         <h2 class="section_title">Получите расчет стоимости имплантации <span>с выгодой 70 000 ₽</span>
                         </h2>
-
-
                         <div class="question">
                             <img src="assets/img/question-subtrac.png" alt="" class="question-subtrac">
                             <div class="question-step">
@@ -1391,7 +1410,8 @@
                                                 <div class="item_title">
                                                     Записаться
                                                 </div>
-                                                <input type="tel" placeholder="+7 (___) ___-__-__" name="phone" require="" inputmode="text">
+                                                <input type="tel" placeholder="+7 (___) ___-__-__" name="phone"
+                                                    require="" inputmode="text">
                                                 <div class="politics">
                                                     <label class="custom-checkbox">
                                                         <input type="checkbox" name="policy" checked="" required="">
@@ -1488,7 +1508,8 @@
                         <div class="contact-items">
                             <div class="contact-col">
                                 <div class="contact-item">
-                                    <p class="contact-text">Удобное расположение, современный интерьер и внимательный персонал - приходите в удобное для вас время</p>
+                                    <p class="contact-text">Удобное расположение, современный интерьер и внимательный
+                                        персонал - приходите в удобное для вас время</p>
                                 </div>
                                 <div class="contact-item">
                                     <img src="assets/img/icon-metro.svg" alt="">
@@ -1619,62 +1640,10 @@
                 </div>
             </form>
         </div>
-        <div class="modal_content wrap" id="step2">
-            <div class="modal_step_title">
-                Ответьте на 4 вопроса и получите расчёт + подарки от клиники
-            </div>
-            <div class="modal_exit">
-                <img src="assets/img/mdal_exit.svg" alt="">
-            </div>
-            <div class="flex_content">
-                <div class="modal_info">
-                    <div class="modal_title sm">
-                        Рассчёт стоимости лечения готов, <span>а подарки уже ваши! Оставьте номер вашего телефона</span>
-                    </div>
-
-                </div>
-                <form action="send.php" method="post" class="modal_form">
-                    <div class="modal_form_title">
-                        Записаться
-                    </div>
-                    <input type="tel" placeholder="+7 (___) ___-__-__" value="+7" class="modal_input" name="phone"
-                        required>
-                    <button class="button">Отправить</button>
-                    <div class="modal_policy">
-                        <label class="modal_policy_label">
-                            <div class="custom_checkbox">
-                                <input type="checkbox" name="policy" required checked />
-                                <span class="checkmark">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
-                                        fill="none">
-                                        <path d="M0.707108 6.48481L5.15155 10.9293L15.3738 0.707031" stroke="white"
-                                            stroke-width="2" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <span>Я согласен на «<a href="#">Обработку персональных данных</a>»</span>
-                        </label>
-                        <label class="modal_policy_label">
-                            <div class="custom_checkbox">
-                                <input type="checkbox" name="policy" required checked />
-                                <span class="checkmark">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
-                                        fill="none">
-                                        <path d="M0.707108 6.48481L5.15155 10.9293L15.3738 0.707031" stroke="white"
-                                            stroke-width="2" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <span>
-                                Я ознакомлен и согласен с «<a href="#">Условиями сбора персональных данных</a>» в
-                                соответствии с «<a href="#">Политикой конфиденциальности</a>»
-                            </span>
-                        </label>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="modal_content" id="step3">
+        
+    </div>
+    <div class="modal modal2" id="modal">
+        <div class="modal_content" id="step3" style="display: flex;">
             <div class="modal_exit">
                 <img src="assets/img/mdal_exit.svg" alt="">
             </div>
