@@ -8,19 +8,20 @@
   }
   .container {
     position: relative;
+    padding: 0 16px;
   }
   .lc_row {
     justify-content: space-between;
     width: 100%;
     .left_side {
       position: absolute;
-      left: 0;
+      left: 16px;
       top: -55px;
       max-width: 640px;
       max-height: 838px;
       overflow: hidden;
 
-      @media (max-width: 1200px) {
+      @media (max-width: 1240px) {
         width: 100%;
         max-width: calc(50% - 15px);
       }
@@ -28,6 +29,9 @@
         max-width: 100%;
         position: relative;
         top: 35px;
+      }
+      @media (max-width: 556px) {
+        left: 0;
       }
       .item_img {
         width: 100%;
@@ -138,6 +142,7 @@
           max-width: calc(50% - 15px);
         }
         @media (max-width: 556px) {
+          bottom: 9px;
           max-width: calc(55% - 15px);
         }
         @media (max-width: 400px) {
@@ -190,19 +195,25 @@
       flex-direction: column;
       margin-top: 35.18px;
       width: 100%;
-      @media (max-width: 1200px) {
+      @media (max-width: 1240px) {
         max-width: calc(50% - 15px);
       }
       @media (max-width: 1024px) {
         max-width: 100%;
+      }
+      @media (max-width: 556px) {
+        margin-top: 27px;
       }
       h2 {
         color: #000;
         font-size: 70px;
         font-style: normal;
         font-weight: 700;
-        line-height: 100%; /* 70px */
+        line-height: 100%;
         max-width: 424px;
+        @media (max-width: 1200px) {
+          font-size: 45px;
+        }
         &.mobile_none {
           @media (max-width: 1024px) {
             display: none;
@@ -214,7 +225,10 @@
         font-size: 70px;
         font-style: normal;
         font-weight: 700;
-        line-height: 100%; /* 70px */
+        line-height: 100%;
+        @media (max-width: 1200px) {
+          font-size: 45px;
+        }
       }
       .item_text {
         margin-top: 6px;
@@ -222,19 +236,24 @@
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
-        line-height: 120%; /* 24px */
+        line-height: 120%;
         margin-bottom: 60px;
+        @media (max-width: 1200px) {
+          margin-bottom: 32px;
+        }
       }
       .promotion {
         display: flex;
         gap: 0 16px;
         @media (max-width: 1200px) {
-          flex-direction: column;
-          gap: 16px;
+          gap: 8px;
         }
         @media (max-width: 1024px) {
           margin-top: 16px;
           flex-direction: column-reverse;
+        }
+        @media (max-width: 556px) {
+          gap: 16px;
         }
         .left_item {
           display: flex;
@@ -339,7 +358,7 @@
             backdrop-filter: blur(22px);
             padding: 24px;
             @media (max-width: 556px) {
-              padding: 12px 24px;
+              padding: 14px 24px;
             }
             span {
               color: #000;
