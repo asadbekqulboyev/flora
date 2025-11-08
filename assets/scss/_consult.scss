@@ -180,8 +180,7 @@
       width: calc(68% - 16px);
 
       &__items {
-        gap: 30px;
-        flex-direction: column;
+        gap: 20px;
         @media (max-width: 556px) {
           gap: 15px;
         }
@@ -189,6 +188,19 @@
     }
     &-right {
       width: calc(32% - 16px);
+    }
+  }
+  &-left__items {
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
+    .final_calculation {
+      @media (max-width: 1400px) {
+        max-width: 350px;
+      }
+      @media (max-width: 1200px) {
+        max-width: 100%;
+      }
     }
   }
   @media (max-width: 1200px) {
@@ -222,11 +234,11 @@
         margin: 0;
       }
 
-      .final_calculation{
+      .final_calculation {
         max-width: 100%;
       }
     }
-    &-prices{
+    &-prices {
       flex-direction: row;
     }
     &-right {
@@ -272,16 +284,16 @@
         display: none;
       }
     }
-    &-subtrac{
+    &-subtrac {
       right: 18px;
       bottom: 18px;
       width: 85%;
     }
-    .person-texts{
+    .person-texts {
       bottom: 15%;
       left: 33%;
     }
-    .person_job{
+    .person_job {
       font-size: 12px;
     }
   }

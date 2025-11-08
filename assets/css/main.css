@@ -3235,8 +3235,7 @@ header .lc_row .header_actions .header_menu svg {
     width: calc(68% - 16px);
   }
   .consult-left__items {
-    gap: 30px;
-    flex-direction: column;
+    gap: 20px;
   }
 }
 @media (max-width: 1400px) and (max-width: 556px) {
@@ -3247,6 +3246,21 @@ header .lc_row .header_actions .header_menu svg {
 @media (max-width: 1400px) {
   .consult-right {
     width: calc(32% - 16px);
+  }
+}
+@media (max-width: 1200px) {
+  .consult-left__items {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1400px) {
+  .consult-left__items .final_calculation {
+    max-width: 350px;
+  }
+}
+@media (max-width: 1200px) {
+  .consult-left__items .final_calculation {
+    max-width: 100%;
   }
 }
 @media (max-width: 1200px) {
