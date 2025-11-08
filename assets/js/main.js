@@ -256,16 +256,21 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  document.addEventListener("DOMContentLoaded", () => {
     const sliderEl = document.querySelector(".hero_slide");
     if (sliderEl) {
       const heroSlider = new Swiper(sliderEl, {
         slidesPerView: 1,
         loop: true,
         spaceBetween: 32,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
       });
     }
-    
-  });
+
+    Fancybox.bind("[data-fancybox]", {
+      // Your custom options
+    });
 
 });

@@ -344,12 +344,12 @@
   @media (max-width: 992px) {
     padding: 60px 0;
 
-    .title_row {
-      flex-direction: column;
-      align-items: flex-start;
-    }
     .item_adv {
       margin: 40px 0;
+
+      li{
+        max-width: calc(50% - 10px);
+      }
     }
     .expert_item {
       width: calc(65% - 10px);
@@ -361,6 +361,10 @@
     .lc_row {
       gap: 16px;
     }
+    .title_row {
+      flex-direction: column;
+      align-items: center;
+    }
     .expert_item {
       width: 90%;
     }
@@ -369,6 +373,10 @@
     }
     .item_adv {
       margin: 16px 0 32px 0;
+
+      li{
+        max-width: 100%;
+      }
       @media (max-width: 556px) {
         margin: 16px 0 35px 0;
       }

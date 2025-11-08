@@ -221,6 +221,13 @@
       &__items {
         margin: 0;
       }
+
+      .final_calculation{
+        max-width: 100%;
+      }
+    }
+    &-prices{
+      flex-direction: row;
     }
     &-right {
       display: flex;
@@ -255,6 +262,7 @@
     }
     &-prices {
       gap: 16px;
+      flex-direction: column;
       @media (max-width: 556px) {
         gap: 8px;
       }
@@ -263,6 +271,18 @@
       br {
         display: none;
       }
+    }
+    &-subtrac{
+      right: 18px;
+      bottom: 18px;
+      width: 85%;
+    }
+    .person-texts{
+      bottom: 15%;
+      left: 33%;
+    }
+    .person_job{
+      font-size: 12px;
     }
   }
 

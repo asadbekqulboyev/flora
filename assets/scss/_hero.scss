@@ -18,9 +18,15 @@
       left: 16px;
       top: -55px;
       max-width: 640px;
-      max-height: 838px;
+      width: 100%;
+      height: 838px;
       overflow: hidden;
-
+      @media (max-width: 1400px) {
+        max-width: 520px;
+      }
+      @media (max-width: 1200px) {
+        height: 790px;
+      }
       @media (max-width: 1240px) {
         width: 100%;
         max-width: calc(50% - 15px);
@@ -29,31 +35,46 @@
         max-width: 100%;
         position: relative;
         top: 35px;
+        left: 0;
       }
       @media (max-width: 556px) {
-        left: 0;
+        height: auto;
       }
       .item_img {
         width: 100%;
         height: 100%;
+        border-radius: 30px;
+        overflow: hidden;
+
         @media (max-width: 1024px) {
           max-width: 100%;
-          overflow: hidden;
         }
-        img {
-          width: 100%;
+        video {
+          width: auto;
           height: 100%;
+
+          @media (max-width: 1024px) {
+            width: 100%;
+            height: auto;
+            aspect-ratio: unset;
+          }
         }
         &.desctop {
-          display: block;
+          display: flex;
+          clip-path: path(
+            "M610 0C626.569 0 640 13.4315 640 30V808C640 824.569 626.569 838 610 838H291.024C274.456 838 261.024 824.569 261.024 808V571.297C261.024 554.728 247.593 541.297 231.024 541.297H30C13.4315 541.297 0 527.865 0 511.297V114.327C0 97.7586 13.4315 84.3271 30 84.3271H216.767C233.335 84.3271 246.767 70.8957 246.767 54.3271V30C246.767 13.4315 260.198 0 276.767 0H610Z"
+          );
           @media (max-width: 1024px) {
-            display: none;
+            // display: none;
+            clip-path: path(
+              "M352.656 0C362.235 0 370 7.76506 370 17.3438V466.656C370 476.235 362.235 484 352.656 484H220.777C211.199 484 203.434 476.235 203.434 466.656V278.617C203.434 269.038 195.669 261.273 186.09 261.273H17.3437C7.76506 261.273 0 253.508 0 243.93V66.0479C0 56.4692 7.76506 48.7041 17.3438 48.7041H125.318C134.897 48.7041 142.662 40.939 142.662 31.3604V17.3438C142.662 7.76506 150.427 0 160.006 0H352.656Z"
+            );
           }
         }
         &.mobile {
           display: none;
           @media (max-width: 1024px) {
-            display: block;
+            // display: block;
           }
         }
       }
